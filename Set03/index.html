@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><span class="icon">&#9835;</span> Musical</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">About Us</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#albums">Albums</a></li>
+                </ul>
+            </nav>
+            <div class="auth" id="auth">
+                <a href="login.html" class="btn btn-primary">Sign In</a>
+                <a href="login.html#register" class="btn btn-outline">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <!-- Player -->
+            <section class="player" id="music">
+                <audio id="audio" controls src="audio/take-me-to-your-heart.mp3"></audio>
+                <div class="player-info">
+                    <div class="now-playing">
+                        <span class="icon">&#9835;</span>
+                        <span id="songTitle">Take me to your heart</span>
+                    </div>
+                    <div class="lyrics">
+                        Take me to your heart, take me to your soul<br>
+                        Give me your hand before I'm old<br>
+                        Show me what love is, haven't got a clue<br>
+                        Show me that wonders can be true
+                    </div>
+                </div>
+            </section>
+
+            <!-- Song list -->
+            <section class="songs" id="albums">
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s2/300" alt="My love"><h4>My love</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s3/300" alt="Cry on my shoulder"><h4>Cry on my shoulder</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s4/300" alt="Heartless"><h4>Heartless</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+
+                <div class="song-card"><img src="https://picsum.photos/seed/s5/300" alt="Chill You"><h4>Chill You</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+                <div class="song-card"><img src="https://picsum.photos/seed/s1/300" alt="Take me to your heart"><h4>Take me to your heart</h4><div class="stars">&#9733;&#9733;&#9733;</div></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <span class="icon">&#9835;</span> Musical Entertainment <span class="icon">&#9835;</span>
+        </div>
+    </footer>
+
+    <script>
+        // Bấm vào bài hát -> đổi tên bài trên player và cuộn lên
+        document.querySelectorAll('.song-card').forEach(function (card) {
+            card.addEventListener('click', function () {
+                document.getElementById('songTitle').textContent = card.querySelector('h4').textContent;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
